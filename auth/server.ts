@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 import mssql from "mssql"
 import cors from "cors"
 
-import routes from "./routes/caffine_routes"
+import routes from "./auth_routes/auth_routes"
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ app.use(cors())
 
 app.use('/api/auth', routes)
 
-app.listen(process.env.PORT || 4000,()=>{
+app.listen(process.env.PORT || 8080,()=>{
     console.log("server is running on 4000");
     
 })

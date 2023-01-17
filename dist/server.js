@@ -12,6 +12,6 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use('/api/auth', caffine_routes_1.default);
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log("server is running on 4000");
 });
