@@ -25,7 +25,9 @@ type data = {
             });
             return request;
         } catch (error: any) {
-         throw new error(error.message)
+        //  throw new error(error.message)
+        console.log(error);
+            
         }
     };
 
@@ -36,7 +38,9 @@ type data = {
             const result = await request?.execute(procedure_name)
             return result
         } catch (error) {
-            throw new error(error.message)
+            // throw new (error.message)
+            console.log(error);
+            
         }
     }
 

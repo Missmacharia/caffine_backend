@@ -10,7 +10,7 @@ const sqlConfig= {
     pool: {
         max: 10,
         min: 0,
-        idleTimeOutMillis: 30000
+        idleTimeoutMillis: 30000
     },
     options: {
         encrypt: false,
@@ -24,6 +24,10 @@ mssql.connect(sqlConfig).then((pool) => {
       console.log('connected');
     }
   });
+
+
+  console.log(process.env.DB_USER );
+  
 
   export default sqlConfig
 
